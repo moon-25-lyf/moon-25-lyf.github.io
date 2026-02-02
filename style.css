@@ -1,0 +1,77 @@
+/* 全局样式重置 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 页面背景 */
+body {
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 50%, #f6d365 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-family: "微软雅黑", sans-serif;
+}
+/* 主体容器 */
+.birthday-container {
+  text-align: center;
+  color: #fff;
+  z-index: 1; /* 确保内容在烟花上面 */
+  padding: 20px;
+}
+/* 标题样式 */
+.title {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px #ff6b6b, 0 0 20px #ff6b6b;
+  animation: flash 1.5s infinite alternate;
+}
+/* 闪烁动画 */
+@keyframes flash {
+  from { opacity: 1; }
+  to { opacity: 0.8; text-shadow: 0 0 20px #ff6b6b, 0 0 30px #ff6b6b; }
+}
+/* 祝福语样式 */
+.wish {
+  font-size: 22px;
+  margin-bottom: 20px;
+  text-shadow: 0 0 5px #333;
+}
+/* 称呼样式 */
+.name {
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+/* 照片样式 */
+.avatar {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 5px solid #fff;
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+  margin-bottom: 30px;
+  object-fit: cover;
+}
+/* 祝福文案样式 */
+.bless {
+  font-size: 24px;
+  line-height: 1.8;
+  text-shadow: 0 0 8px #333;
+  background: rgba(0, 0, 0, 0.2);
+  padding: 20px 30px;
+  border-radius: 15px;
+}
+/* 烟花容器 */
+.fireworks {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none; /* 不影响点击 */
+  z-index: 0;
+}
